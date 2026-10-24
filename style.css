@@ -1,0 +1,227 @@
+:root {
+  --ink: #1b1f24;
+  --muted: #5b6672;
+  --accent: #2f6f4f;
+  --line: #e2e6ea;
+  --card: #ffffff;
+  --bg: #f6f8f7;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* ---------- header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 32px;
+  background: #10362a;
+  color: #ffffff;
+}
+
+.brand {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.home-icon {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.main-nav { display: flex; gap: 22px; flex-wrap: wrap; }
+
+.main-nav a {
+  color: #e8f2ec;
+  text-decoration: none;
+  font-weight: 400;
+  padding-bottom: 2px;
+}
+
+/* requirement: navigation items bold and underlined on hover */
+.main-nav a:hover,
+.main-nav a:focus {
+  font-weight: 700;
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* ---------- sections ---------- */
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 56px 32px;
+}
+
+.section h2 {
+  margin: 0 0 22px;
+  font-size: 1.6rem;
+  color: var(--accent);
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 8px;
+}
+
+/* ---------- about ---------- */
+.about-body { display: flex; gap: 28px; align-items: flex-start; flex-wrap: wrap; }
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* requirement: name styled in the profile section */
+.profile-name {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #10362a;
+  letter-spacing: 0.01em;
+}
+
+.profile-summary { margin: 0; max-width: 62ch; color: var(--muted); }
+
+/* ---------- projects ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card h3 { margin: 0 0 10px; font-size: 1.08rem; color: #10362a; }
+
+.card p { margin: 0 0 10px; color: var(--muted); font-size: 0.95rem; }
+
+.card .stack {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+}
+
+/* ---------- skills ---------- */
+.skill-grid { display: flex; gap: 18px; flex-wrap: wrap; }
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 120px;
+  padding: 16px 8px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.skill img { width: 52px; height: 52px; }
+
+/* ---------- recommendations ---------- */
+.recommendation-list { display: grid; gap: 16px; margin-bottom: 36px; }
+
+.recommendation {
+  background: var(--card);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+
+.recommendation .quote { margin: 0 0 10px; font-style: italic; color: var(--ink); }
+
+.recommendation .author { margin: 0; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+
+.recommendation-form {
+  display: grid;
+  gap: 8px;
+  max-width: 560px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.recommendation-form h3 { margin: 0 0 6px; font-size: 1.05rem; color: #10362a; }
+
+.recommendation-form label { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
+
+.recommendation-form input,
+.recommendation-form textarea {
+  width: 100%;
+  padding: 9px 11px;
+  font: inherit;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.recommendation-form button {
+  justify-self: start;
+  margin-top: 8px;
+  padding: 10px 18px;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--accent);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.recommendation-form button:hover { background: #245740; }
+
+/* ---------- popup / footer ---------- */
+.popup {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  background: #10362a;
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  font-size: 0.92rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.popup.visible { opacity: 1; }
+
+.site-footer {
+  padding: 26px 32px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--line);
+}

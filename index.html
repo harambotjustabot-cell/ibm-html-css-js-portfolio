@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruel Tabernilla | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Ruel Tabernilla - back to top">
+      <span class="home-icon" aria-hidden="true">&#8962;</span>
+      Ruel Tabernilla
+    </a>
+    <nav class="main-nav">
+      <a href="#about">About Me</a>
+      <a href="#projects">Project Details</a>
+      <a href="#skills">Skills</a>
+      <a href="#recommendations">Recommendations</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="section about">
+      <h2>About Me</h2>
+      <div class="about-body">
+        <img class="profile-image" src="images/profile.jpg" alt="Portrait of Ruel Tabernilla">
+        <div>
+          <p class="profile-name">Ruel Tabernilla</p>
+          <p class="profile-summary">
+            I am a full stack developer who enjoys turning messy requirements into
+            working software. I build Django and Node services, wire them to React
+            front ends, and ship them with containers and CI/CD. Most recently I
+            completed the IBM Full Stack Software Developer program, where I built a
+            car dealership review portal end to end.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Project Details</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Car Dealership Review Portal</h3>
+          <p>
+            A full stack app where customers browse dealerships, read reviews and post
+            their own. Django serves the session-based UI, an Express API backed by
+            MongoDB holds the dealership data, and a Flask microservice scores the
+            sentiment of every review.
+          </p>
+          <p class="stack">Django &middot; React &middot; Express &middot; MongoDB &middot; Flask</p>
+        </article>
+        <article class="card">
+          <h3>Containerised CI Pipeline</h3>
+          <p>
+            A GitHub Actions pipeline that lints the Python and JavaScript in separate
+            jobs, builds the React bundle and gates merges on a green run. Images are
+            built once and promoted between environments rather than rebuilt.
+          </p>
+          <p class="stack">GitHub Actions &middot; Docker &middot; Kubernetes</p>
+        </article>
+        <article class="card">
+          <h3>Simple Interest Calculator</h3>
+          <p>
+            A small browser tool that computes simple interest from principal, rate and
+            tenure, with sliders for rate and tenure and an input that refuses
+            non-numeric principal values.
+          </p>
+          <p class="stack">JavaScript &middot; DOM &middot; HTML5</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skill-grid">
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo">
+          <span>Python</span>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React logo">
+          <span>React</span>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker logo">
+          <span>Docker</span>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo">
+          <span>JavaScript</span>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 logo">
+          <span>HTML5</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="recommendations" class="section">
+      <h2>Recommendations</h2>
+
+      <div class="recommendation-list" id="recommendation-list">
+        <div class="recommendation">
+          <p class="quote">
+            &ldquo;Ruel shipped the dealership portal ahead of schedule and wrote the
+            deployment runbook nobody asked him to write.&rdquo;
+          </p>
+          <p class="author">Maria Santos &middot; Engineering Manager, Dealerships Inc.</p>
+        </div>
+        <div class="recommendation">
+          <p class="quote">
+            &ldquo;He is the person we call when the pipeline breaks at 11pm &mdash; calm,
+            methodical, and he always leaves the logs better than he found them.&rdquo;
+          </p>
+          <p class="author">James Whitfield &middot; Staff Engineer, Northwind Retail</p>
+        </div>
+        <div class="recommendation">
+          <p class="quote">
+            &ldquo;Ruel explains technical trade-offs to non-technical stakeholders better
+            than anyone on my team. That is why his projects actually land.&rdquo;
+          </p>
+          <p class="author">Priya Raman &middot; Product Lead, Northwind Retail</p>
+        </div>
+      </div>
+
+      <form id="recommendation-form" class="recommendation-form">
+        <h3>Add a recommendation</h3>
+        <label for="recommender-name">Your name</label>
+        <input id="recommender-name" type="text" placeholder="Jane Smith" required>
+        <label for="recommendation-input">Your recommendation</label>
+        <textarea id="recommendation-input" rows="3" placeholder="What was it like working with Ruel?" required></textarea>
+        <button type="submit">Submit recommendation</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Ruel Tabernilla. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
